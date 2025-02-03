@@ -17,6 +17,8 @@ ggplot(
     ) +
     scale_color_colorblind()
 
+
+## Exercises 1.2.5
 ggplot(
     data = penguins,
     mapping = aes(x = bill_length_mm, y = bill_depth_mm, color = species, shape = species)
