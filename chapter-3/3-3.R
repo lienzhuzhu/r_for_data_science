@@ -20,3 +20,17 @@ flights |>
 # flights |>
 #     select(tailnum) |>
     # arrange(arr_delay)
+
+flights |>
+    filter(dest == "IAH") |>
+    mutate(speed = distance / air_time) |>
+    arrange(desc(speed)) |>
+    select(year:day, dep_time, carrier, flight, speed)
+
+
+flights |> 
+    group_by(month) |> 
+    summarize(
+        avg_delay = mean(dep_delay, na.rm = TRUE),
+        n = n()
+    )
