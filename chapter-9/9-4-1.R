@@ -9,17 +9,15 @@ ggplot(mpg, aes(x = displ, y = hwy)) +
 ggplot(mpg) + 
     geom_point(aes(x = drv, y = cyl))
 
+
 ggplot(mpg) + 
     geom_point(aes(x = displ, y = hwy)) +
-    facet_grid(drv ~ .)
+    facet_grid(drv ~ .) # Column is nothing, Places drv subplots in rows
 
 ggplot(mpg) + 
     geom_point(aes(x = displ, y = hwy)) +
     facet_grid(. ~ cyl) # Matches default behavior
 
-ggplot(mpg) + 
-    geom_point(aes(x = displ, y = hwy)) +
-    facet_grid(drv ~ .) # Column is nothing, Places drv subplots in rows
 
 ggplot(mpg, aes(x = displ)) + # I like this one better for histogram for some reason
     geom_histogram() + 

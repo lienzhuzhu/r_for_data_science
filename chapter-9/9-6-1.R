@@ -20,3 +20,8 @@ ggplot(mpg, aes(x = displ, y = hwy)) +
 mpg |> 
     ggplot() +
     geom_boxplot( aes(x = trans, y = hwy) )
+
+ggplot(data = mpg, mapping = aes(x = cty, y = hwy)) +
+    geom_point() + 
+    geom_abline(intercept = 8) +
+    coord_fixed()
