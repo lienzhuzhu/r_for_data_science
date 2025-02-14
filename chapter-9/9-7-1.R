@@ -9,3 +9,7 @@ ggplot(data = mpg, mapping = aes(x = cty, y = hwy)) +
     geom_point() + 
     geom_abline(intercept = 8) +
     coord_fixed()
+
+ggplot(diamonds, aes(x = "", fill = cut)) +
+    geom_bar() +
+    labs(x = "Diamonds")
