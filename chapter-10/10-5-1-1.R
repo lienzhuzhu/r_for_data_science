@@ -1,5 +1,4 @@
 library(tidyverse)
-library(lvplot)
 library(ggthemes)
 
 nycflights13::flights |> 
